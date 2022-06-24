@@ -5,7 +5,9 @@ import re
 
 
 def domain_name(url):
+    
     ''' Сравниваем url с регулярным выражением и записываем в переменную. После меняем символы. '''
+    
     result = re.search(r'[./]?(?:www.)?\w+\-?\w+[.]', url)
     s = result[0]
     s = s.replace('www', '')
