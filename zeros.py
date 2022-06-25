@@ -1,15 +1,19 @@
-import re
-
-
+# import re
+#
+#
+# def zeros(n):
+#     factorial = 1
+#     while n > 1:
+#         factorial *= n
+#         n -= 1
+#     res = re.search(r"0+\b", str(factorial))
+#
+#     return len(res.group(0)) if res else 0
 def zeros(n):
-    factorial = 1
-    while n > 1:
-        factorial *= n
-        n -= 1
-    res = re.search(r"0+\b", str(factorial))
-
-    return len(res.group(0)) if res else 0
-
+    if n < 5:
+        return 0
+    else:
+        return n//5 + zeros(n//5)
 
 
 
